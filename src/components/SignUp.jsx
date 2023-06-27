@@ -10,7 +10,7 @@ function SignUp() {
 
   return (
     <>
-      <Button variant="outline-primary ms-2" onClick={handleShow}>
+      <Button variant="outline-primary me-2" onClick={handleShow}>
         <span className='fa fa-user-plus ms-2'>Sign Up</span>
       </Button>
       <Modal show={show} onHide={handleClose}>

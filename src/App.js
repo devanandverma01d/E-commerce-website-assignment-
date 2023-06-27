@@ -7,6 +7,8 @@ import Contact from './pages/Contact';
 import Layout from './pages/Layout';
 import NoPage from './pages/NoPage';
 import ProductDetail from './pages/ProductDetail';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path='product' element={<Product />} />
           <Route path='product/:id' element={<ProductDetail />} />
           <Route path='contact' element={<Contact />} />
+          <Route path='cart' element={<Cart />} />
+          <Route path='checkout' element={<Checkout />} />
         </Route>
         <Route path='*' element={<NoPage />} />
       </Routes>

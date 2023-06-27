@@ -1,10 +1,13 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom'
+import {addItem,delItem} from '../redux/actions/index'
 const ProductDetail = () => {
     const prodId = useParams();
     const[cartBtn,setCartBtn]= useState('Add to Cart')
     const[details,setDetails]= useState([])
+    const dispatch=useDispatch()
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -21,9 +24,11 @@ const ProductDetail = () => {
 
       const handleCart=(details)=>{
         if(cartBtn==='Add to Cart'){
+          dispatch(addItem(details))
           setCartBtn('Remove from Cart')
         }
         else{
+          dispatch(delItem(details))
           setCartBtn('Add to Cart')
         }
       }
