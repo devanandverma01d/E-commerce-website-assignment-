@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import SignIn from './SignIn'
 import SignUp from './SignUp'
 import CartBtn from './CartBtn'

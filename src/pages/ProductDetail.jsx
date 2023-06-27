@@ -20,7 +20,7 @@ const ProductDetail = () => {
         };
     
         fetchData(); 
-      }, []);
+      },);
 
       const handleCart=(details)=>{
         if(cartBtn==='Add to Cart'){

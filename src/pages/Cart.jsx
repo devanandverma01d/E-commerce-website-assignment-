@@ -18,7 +18,7 @@ const Cart = () => {
         return(
             <div className='px-4 my-5 bg-light rounded-3' key={cartItem.id}>
                 <div className='container py-4'>
-                    <button onClick={()=>handleDel(cartItem)} className="btn-close float-end" aria-aria-label='close'></button>
+                    <button onClick={()=>handleDel(cartItem)} className="btn-close float-end"></button>
                     <div className="row justify-content-center">
                         <div className="col-md-4">
                             <img src={cartItem.image} alt={cartItem.title}  height="200px" width='180px'/>
