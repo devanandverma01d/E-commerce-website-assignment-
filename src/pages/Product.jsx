@@ -2,12 +2,13 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import '../App.css'
 import { NavLink } from 'react-router-dom'
+import { BASE_URL } from '../helpers/helper'
 const Product = () => {
   const[data,setData]=useState([])
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://fakestoreapi.com/products');
+        const response = await axios.get(`${BASE_URL}`);
         setData(response.data);
         // console.log(response.data)
       } catch (error) {

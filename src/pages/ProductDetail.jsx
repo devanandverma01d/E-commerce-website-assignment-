@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import {addItem,delItem} from '../redux/actions/index'
+import { BASE_URL } from '../helpers/helper';
 const ProductDetail = () => {
     const prodId = useParams();
     const[cartBtn,setCartBtn]= useState('Add to Cart')
@@ -11,7 +12,7 @@ const ProductDetail = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get(`https://fakestoreapi.com/products/${prodId.id}`);
+            const response = await axios.get(`${BASE_URL}/${prodId.id}`);
             setDetails(response.data);
             // console.log('response---->',response.data)
           } catch (error) {
